@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>Admin Portal - Saibaba Electronics Silvassa</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#dce2f7", "surface-dim": "#d3daef", "surface": "#f9f9ff", "tertiary-fixed-dim": "#ffb68b", "secondary-fixed": "#dbe1ff", "on-tertiary-fixed": "#321200", "primary-container": "#0b1f3a", "on-secondary-fixed-variant": "#003ea8", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#753400", "on-secondary-container": "#fefcff", "secondary-fixed-dim": "#b4c5ff", "on-tertiary-container": "#d76600", "outline": "#75777e", "on-error": "#ffffff", "error-container": "#ffdad6", "on-surface": "#141b2b", "on-error-container": "#93000a", "surface-container-highest": "#dce2f7", "on-background": "#141b2b", "background": "#f9f9ff", "secondary-container": "#316bf3", "tertiary": "#100300", "surface-tint": "#4d5f7d", "inverse-surface": "#293040", "primary": "#000615", "secondary": "#0051d5", "primary-fixed-dim": "#b5c7ea", "primary-fixed": "#d6e3ff", "inverse-on-surface": "#edf0ff", "surface-bright": "#f9f9ff", "tertiary-fixed": "#ffdbc8", "surface-container-low": "#f1f3ff", "on-secondary-fixed": "#00174b", "inverse-primary": "#b5c7ea", "surface-container-high": "#e1e8fd", "surface-container": "#e9edff", "on-tertiary": "#ffffff", "on-surface-variant": "#44474d", "error": "#ba1a1a", "outline-variant": "#c4c6ce", "on-primary-fixed": "#071c36", "tertiary-container": "#371500", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#364764", "on-primary-container": "#7587a7", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "2rem" }, "fontFamily": { "label-md": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "label-lg": ["Inter"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "display-hero-mobile": ["Inter"], "title-md": ["Inter"], "body-lg": ["Inter"], "display-hero": ["Inter"], "label-price": ["Inter"], "headline-md": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "800" }], "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-price": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><link rel="stylesheet" href="demo.css"/><script defer src="products.js"></script><script defer src="demo.js"></script></head><body data-page="admin.html" class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/30"><div class="h-16 px-6 flex items-center gap-3 border-b border-outline-variant/20"><img alt="Saibaba Electronics Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V0ZdkdheYDHz2T11J370jaZrRryD6RJHYMrO51lbdzkJ8QV3RLNQtAU4trRwniNjanNK1p0v-CbQkZzNVrnPFcUeja3ks7isnyxYHqzppSXj8Frl858g0D9s--VJQcfPkWUZr2aFwHQFXyf2hv5A30kiSA6tmmb62nxmohUG6ItzRbr1rIA1oOcouEzWp3-yXy6895hOnPuKLKSQlZxrHYe833kZXCoitctgOADg0nJj_Svk4VtRTAZnHD"/><div class="flex flex-col"><span class="font-title-md text-title-md font-bold text-on-surface leading-tight">SAIBABA</span><span class="text-[10px] uppercase font-bold tracking-widest text-secondary">Operations Hub</span></div></div><div class="px-4 py-3 bg-surface-container-low border-b border-outline-variant/20 flex items-center justify-between"><span class="text-label-md font-label-md text-on-surface font-semibold">Silvassa Red Cross Store</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><nav class="flex-1 px-3 py-4 space-y-1.5 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-3 px-3.5 py-2.5 transition-colors bg-primary-container text-on-primary font-semibold rounded-lg" data-path="admin-inventory" href="admin.html"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Inventory Management</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-orders" href="admin.html"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span>Store Pickup &amp; Orders</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-pricing" href="admin.html"><span class="material-symbols-outlined text-[20px]">sell</span><span>Festive Offers &amp; Pricing</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-customers" href="admin.html"><span class="material-symbols-outlined text-[20px]">group</span><span>Customer Ledger</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="index.html"><span class="material-symbols-outlined text-[20px]">storefront</span><span>Customer Storefront</span></a></nav><div class="p-4 border-t border-outline-variant/20"><div class="flex items-center gap-3"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqz4E0B1J-jiz2K2ha9TociWGajfQbreeQ3FNAE0x4IUOGUg14b_KDq0H9WPRDRKAJFOhJQiahLvFACEmoEvaLj6bBxac270x9UweKG0FTItAFZv_FGvZHtjz5f0ed58Pz9ml3kqoZakxARcvl9-Px4NBc0gDYv6wOMf_coqtht-NbSkaw8Wk3TVvbJJ9asIxMdMrQFWcS2rt1Jku8rsxqKQqWzsmnnDo_7gOEXrCAVjvKg4ei_bhezA"/><div class="flex flex-col"><span class="text-label-md font-label-md font-semibold text-on-surface">Store Manager</span><span class="text-body-sm font-body-sm text-on-surface-variant">Red Cross Branch</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 z-40 flex items-center justify-between px-8 shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex items-center gap-3"><span class="text-label-md font-label-md px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-semibold">SILVASSA REGIONAL DESK</span><span class="text-body-sm font-body-sm text-on-surface-variant">Operational till 9:30 PM</span></div><div class="flex items-center gap-4"><a class="text-label-md font-label-md text-secondary hover:underline flex items-center gap-1" data-path="home" href="index.html"><span class="material-symbols-outlined text-[16px]">open_in_new</span>View Live Store</a><div class="w-px h-6 bg-outline-variant/40"></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqz4E0B1J-jiz2K2ha9TociWGajfQbreeQ3FNAE0x4IUOGUg14b_KDq0H9WPRDRKAJFOhJQiahLvFACEmoEvaLj6bBxac270x9UweKG0FTItAFZv_FGvZHtjz5f0ed58Pz9ml3kqoZakxARcvl9-Px4NBc0gDYv6wOMf_coqtht-NbSkaw8Wk3TVvbJJ9asIxMdMrQFWcS2rt1Jku8rsxqKQqWzsmnnDo_7gOEXrCAVjvKg4ei_bhezA"/></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Operational Banner & Quick Actions -->
+<div class="px-8 pt-8 pb-4 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Live Counter Sync
+        </span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Last refreshed: Just now</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg text-on-surface tracking-tight flex items-center gap-3">
+        Red Cross Operational Desk
+        <span class="text-title-md font-title-md px-3 py-0.5 rounded-full bg-surface-container-high text-secondary">Silvassa Central</span>
+</h1>
+<p class="text-body-md font-body-md text-on-surface-variant">
+        Managing retail floor dispatch, local doorstep logistics &amp; omni-channel festive counters.
+      </p>
+</div>
+<!-- Live Store Controls & Summary Pills -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="bg-surface-container-lowest px-4 py-3 rounded-xl shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">store</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-on-surface-variant">Store Operations</span>
+<span class="text-title-md font-title-md text-on-surface">Open till 9:30 PM</span>
+</div>
+</div>
+<button class="px-4 py-3 rounded-xl bg-primary text-on-primary hover:bg-secondary transition-all shadow-sm flex items-center gap-2 font-label-lg text-label-lg group">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:rotate-180">sync</span>
+<span>Broadcast Flash Deal</span>
+</button>
+<button class="px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all shadow-sm flex items-center gap-2 font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[20px] text-secondary">point_of_sale</span>
+<span>New Walk-in POS Bill</span>
+</button>
+</div>
+</div>
+<!-- KPI Metric Overview Grid -->
+<div class="px-8 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+<!-- Total Sales KPI -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-center justify-between mb-3">
+<span class="text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Today's Total Sales</span>
+<span class="p-2 bg-secondary-fixed/50 text-secondary rounded-lg">
+<span class="material-symbols-outlined text-[18px]">currency_rupee</span>
+</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface font-extrabold tracking-tight">₹3,42,850</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-label-md font-label-md text-secondary font-bold flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>+18.4%
+          </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">18 orders completed</span>
+</div>
+</div>
+</div>
+<!-- Store Pickup KPI -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<span class="text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Pending Counter Pickup</span>
+<span class="p-2 bg-secondary-fixed/50 text-secondary rounded-lg">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface font-extrabold tracking-tight">07 <span class="text-title-md font-title-md text-on-surface-variant font-normal">Packets</span></div>
+<div class="flex items-center gap-1.5 mt-1 text-on-tertiary-container font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Ready at Red Cross Desk
+        </div>
+</div>
+</div>
+<!-- Low Stock Alert KPI -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<span class="text-label-md font-label-md text-error uppercase tracking-wider">Low Stock Critical</span>
+<span class="p-2 bg-error-container text-error rounded-lg">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-error font-extrabold tracking-tight">04 <span class="text-title-md font-title-md text-on-surface-variant font-normal">SKUs</span></div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 truncate">Daikin 1.5T AC (1 unit), iPhone 15 (2 units)</p>
+</div>
+</div>
+<!-- WhatsApp Leads KPI -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<span class="text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">WhatsApp Queries</span>
+<span class="p-2 bg-surface-container text-secondary rounded-lg">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface font-extrabold tracking-tight">12 <span class="text-title-md font-title-md text-on-surface-variant font-normal">Unread</span></div>
+<div class="flex items-center gap-1 text-label-md font-label-md text-secondary mt-1">
+<span class="material-symbols-outlined text-[16px]">near_me</span>
+          Avg. 4m response rate
+        </div>
+</div>
+</div>
+<!-- Active Catalog KPI -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<span class="text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Live Catalog Range</span>
+<span class="p-2 bg-surface-container text-on-surface rounded-lg">
+<span class="material-symbols-outlined text-[18px]">devices_other</span>
+</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface font-extrabold tracking-tight">248 <span class="text-title-md font-title-md text-on-surface-variant font-normal">Live</span></div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1">100% Genuine Warranty Verified</div>
+</div>
+</div>
+</div>
+<!-- Operational Core: Dispatch Table & Right Sidebar Grid -->
+<div class="px-8 py-6 grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- Center/Left Column: Live Orders and Dispatch Monitor (8 Cols) -->
+<div class="xl:col-span-8 flex flex-col gap-6">
+<!-- Order Management Table Card -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-6 flex flex-col gap-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="text-title-md font-title-md text-on-surface font-bold">Fulfillment Queue &amp; Counter Pickups</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md">Live Stream</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Real-time order statuses across Dadra &amp; Nagar Haveli deliveries &amp; in-store collections.</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute left-3 top-2.5 pointer-events-none">search</span>
+<input class="pl-9 pr-3 py-2 bg-surface rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-low transition-colors w-48 lg:w-60" placeholder="Search order ID, phone..." type="text"/>
+</div>
+<button class="p-2 bg-surface hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors" title="Filter Queue">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Orders Table -->
+<div class="overflow-x-auto -mx-6 px-6">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-label-md font-label-md uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Order ID / Customer</th>
+<th class="py-3 px-4">Items / Category</th>
+<th class="py-3 px-4">Amount &amp; Method</th>
+<th class="py-3 px-4">Mode</th>
+<th class="py-3 px-4">Fulfillment Status</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container/60 text-body-sm font-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#SB-SLV-8941</span>
+<span class="text-on-surface font-medium">Bhavin Patel</span>
+<span class="text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span> Samarvarni, Silvassa
+                    </span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-contain bg-surface-container p-1" data-alt="Apple iPhone 15 Pro Natural Titanium smartphone presented on a light background with crisp studio lighting for electronics showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQWBZiH-24u6tZiFsVxALpdH98G-k2mKTpxNPwfHGMMAg7d8mLfVUq6OMWg1cGLBCIs-WlGj437qIXXrJF34BMkx_hPYwTWpsVnn3Na4tkA-ptogb8NX9x2yC-l58HQAj5bNQNuIHWwAkFEtSACspRHm7kC5WzmaJzN7KTr52UZP2uIt_5nUiKZ8nQasM0D3N4jeik4rdoT9BXJrxxWMW52XijQP7XEUSotI0MUXi8NhVLHNMFkP9rUA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-on-surface truncate">iPhone 15 128GB Blue</span>
+<span class="text-[11px] text-on-surface-variant">Qty: 1 • Apple Care Reg.</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">₹71,490</span>
+<span class="text-[11px] text-secondary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> UPI (Paid)
+                    </span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md inline-flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">store</span> Red Cross Pickup
+                  </span>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary text-label-md font-label-md inline-flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">inventory</span> Ready at Desk
+                  </span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors text-label-md font-label-md flex items-center gap-1" title="Print GST Invoice">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> GST
+                    </button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-secondary transition-colors" title="WhatsApp Customer Handover">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#SB-SLV-8940</span>
+<span class="text-on-surface font-medium">Kavita Sharma</span>
+<span class="text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span> Sayli Road, Silvassa
+                    </span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-contain bg-surface-container p-1" data-alt="Sony Bravia 55 inch 4K Ultra HD Smart LED Google TV front profile with slim bezel on a neutral minimalist setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnyCqCCR2-_05fb9Yb_zT1KuLLYqe1gjReOI8JOEnli1NZ0fom0DxiA6so6VMa0a4NKqGRazNvN8_UHzD5u-wgHKU3VhBG5afnp8bhuFAynDNw1KrEG651z6oFxw-nPovu-TvP8xmoT8jhgWiPop7-ELI1Ochn2P1Mg-Eyxlr0Tw82MnMzovVA_WZPp8VxQ2wG6hidnrvo9bKI5bScxdoNrgspEjVtta37X7dnopXTMGGQ80_-tGvjKA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-on-surface truncate">Sony Bravia 55" 4K Google TV</span>
+<span class="text-[11px] text-on-surface-variant">Qty: 1 • Wall Mount Incl.</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">₹58,900</span>
+<span class="text-[11px] text-on-surface-variant font-medium">HDFC Card No-Cost EMI</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface text-label-md font-label-md inline-flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> Local Van Delivery
+                  </span>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface-variant text-label-md font-label-md inline-flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Van Out for Dispatch
+                  </span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors text-label-md font-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> GST
+                    </button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#SB-SLV-8939</span>
+<span class="text-on-surface font-medium">Amit Deshmukh</span>
+<span class="text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span> Piparia Ind. Area, Silvassa
+                    </span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-contain bg-surface-container p-1" data-alt="Daikin 1.5 Ton 5 Star Inverter Split Air Conditioner indoor unit clean product photography on clear white stage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaqfclcuujL8-xOxWJ_7He0ZFOVtL1cLZ9cvy5ZxMeM70SBfHle9aqywnLDt_xhlqhfB9kW8ZiT-VPfY2XF0FhH_5VRizPPs_XrWTS_bwtPsl4bilcHj5Jua4TtMqoRbOa6n1A5_EeZB1klJ4H8oDffqMkBbzS2XtU60CAQUSV3a1AAigpKFEKLUXVsYnVmuHOQsrTqEmC7P3N3s5LNa0YW0WTlZ0QB7vXDdQZifacHc778YiR9tR6ug"/>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-on-surface truncate">Daikin 1.5 Ton Inverter AC</span>
+<span class="text-[11px] text-on-surface-variant">Qty: 2 • Copper Condenser</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">₹89,200</span>
+<span class="text-[11px] text-secondary font-semibold">Net Banking (Verified)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md inline-flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">store</span> Red Cross Pickup
+                  </span>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-md font-label-md inline-flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span> Floor Verification
+                  </span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-secondary text-on-secondary hover:bg-primary transition-colors text-label-md font-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check</span> Ready
+                    </button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#SB-SLV-8938</span>
+<span class="text-on-surface font-medium">Dr. Sneha Solanki</span>
+<span class="text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span> Kilvani Naka, Silvassa
+                    </span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-contain bg-surface-container p-1" data-alt="Apple iPad Air M2 chip space grey finish sleek modern tablet on white reflective studio table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJzB-RLo6DXPOmnS6PSKAjE11Cx1G25wcA_CD3FjMKVnXuQ_g68HnKeffOL-wonnYGJss01LVF0b9hWUgkEh0nNC4zqkRRnI9CQOLBuOcSSaGF9DWDM0yLht0ZhCLsji0IbvkQTeV4fM6qqTtcFxtPaIijpv_yHRD_ETG9ONEYdKNUTuYxwd3mFAaxszG783cSthym-aGmKm1LKSCwm2mk_9KXW1jQkCKqIkqfllwxzOyOJlsaN9fN7Q"/>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-on-surface truncate">iPad Air 11" M2 Wi-Fi</span>
+<span class="text-[11px] text-on-surface-variant">Qty: 1 • Pencil Pro Combo</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">₹64,900</span>
+<span class="text-[11px] text-secondary font-semibold">UPI AutoPay</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md inline-flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">store</span> Red Cross Pickup
+                  </span>
+</td>
+<td class="py-4 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary text-label-md font-label-md inline-flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">inventory</span> Ready at Desk
+                  </span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors text-label-md font-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> GST
+                    </button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Showing 4 of 18 active dispatch batches today</span>
+<a class="text-label-md font-label-md text-secondary hover:underline flex items-center gap-1 font-bold" href="#">
+            View Complete Order Register <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Quick Inventory & Stock Adjustment Panel -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-6 flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="text-title-md font-title-md text-on-surface font-bold">Instant Stock &amp; Festive Price Adjuster</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Update in-store display availability, festive deal tags, and physical inventory tallies.</p>
+</div>
+<span class="text-label-md font-label-md px-3 py-1 bg-surface-container-high text-on-surface rounded-full flex items-center gap-1 self-start">
+<span class="material-symbols-outlined text-[16px]">barcode_scanner</span> Barcode Sync Active
+          </span>
+</div>
+<!-- Fast Modifier Form -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 bg-surface p-5 rounded-xl">
+<div class="md:col-span-5 flex flex-col gap-1.5">
+<label class="text-label-md font-label-md text-on-surface font-semibold">Select SKU or Scan Barcode</label>
+<div class="relative">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute left-3 top-3">qr_code_scanner</span>
+<input class="w-full pl-9 pr-3 py-2.5 bg-surface-container-lowest rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/20" type="text" value="SKU-APL-IP15-128-BLU (Apple iPhone 15)"/>
+</div>
+</div>
+<div class="md:col-span-2 flex flex-col gap-1.5">
+<label class="text-label-md font-label-md text-on-surface font-semibold">Showroom Stock</label>
+<div class="flex items-center">
+<input class="w-full px-3 py-2.5 bg-surface-container-lowest rounded-lg text-body-sm font-body-sm text-on-surface font-bold focus:outline-none" type="number" value="2"/>
+</div>
+</div>
+<div class="md:col-span-3 flex flex-col gap-1.5">
+<label class="text-label-md font-label-md text-on-surface font-semibold">Festive Offer Price (₹)</label>
+<div class="relative">
+<span class="text-label-md font-label-md text-on-surface-variant absolute left-3 top-3">₹</span>
+<input class="w-full pl-7 pr-3 py-2.5 bg-surface-container-lowest rounded-lg text-body-sm font-body-sm text-on-surface font-bold focus:outline-none" type="text" value="69,990"/>
+</div>
+</div>
+<div class="md:col-span-2 flex items-end">
+<button class="w-full py-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-primary transition-colors text-label-md font-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">save</span> Update
+            </button>
+</div>
+<div class="md:col-span-12 flex flex-wrap items-center justify-between pt-2 gap-3 text-body-sm font-body-sm">
+<div class="flex items-center gap-4">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0" type="checkbox"/>
+<span class="text-on-surface font-medium">In-Store Demo Display Unit Ready</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0" type="checkbox"/>
+<span class="text-on-surface font-medium">Show "Silvassa Red Cross Pickup" on Storefront</span>
+</label>
+</div>
+<span class="text-on-surface-variant text-[12px]">Last updated by Rajesh S. at 04:12 PM</span>
+</div>
+</div>
+<!-- Low Stock Fast-Restock Ticker -->
+<div class="flex flex-col gap-3">
+<span class="text-label-md font-label-md text-on-surface uppercase tracking-wider font-bold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span> Urgent Restock Requests (Daman Depo)
+          </span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="p-3 bg-surface rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-error-container text-error rounded-lg">
+<span class="material-symbols-outlined text-[18px]">ac_unit</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-on-surface font-semibold">Daikin 1.5T 5-Star Split AC</span>
+<span class="text-[12px] text-error font-medium">1 unit left on showroom floor</span>
+</div>
+</div>
+<button class="px-2.5 py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded-lg text-[12px] font-semibold">
+                Request +5
+              </button>
+</div>
+<div class="p-3 bg-surface rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-error-container text-error rounded-lg">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-on-surface font-semibold">iPhone 15 128GB Midnight</span>
+<span class="text-[12px] text-error font-medium">2 units left in counter vault</span>
+</div>
+</div>
+<button class="px-2.5 py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded-lg text-[12px] font-semibold">
+                Request +10
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Regional Hub Insights & Feedback Stream (4 Cols) -->
+<div class="xl:col-span-4 flex flex-col gap-6">
+<!-- Silvassa Store Location & Dispatch Map Card -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">hub</span>
+<h3 class="text-title-md font-title-md text-on-surface font-bold">Store &amp; Delivery Radii</h3>
+</div>
+<span class="text-label-md font-label-md px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-bold">DNH Region</span>
+</div>
+<div class="w-full h-44 rounded-xl relative overflow-hidden bg-surface-container flex flex-col justify-end p-3 shadow-inner" data-location="Red Cross Road, Silvassa, Dadra and Nagar Haveli" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfcDezi4yP2qZzdvYi34yZSgext3O0oogXzLC95cN2DFeI7AaAE30JLDBmNrdYtr7o8VU6oOPZcquWjqVZVcT5TgvG3wSkbBRuIn5hhlkRWoWySJ6_r1VacaXvfelNVwAnoauRwV6mz6ZxHO4stzhisjywKAL9crtgx3Lce88qBwOUITeOKHEOmRtvbJxAvL2n0G8bUVtTFApLkTHHMeVY18q76krTB4veKKeyXHZ9OXQsn2pwA59RlA')">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md p-2.5 rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-label-md font-label-md font-bold text-on-surface">Red Cross Main Showroom</span>
+<span class="text-[11px] text-on-surface-variant">Active Delivery Radius: 18km (Silvassa, Naroli, Sayli)</span>
+</div>
+<span class="p-1.5 bg-secondary text-on-secondary rounded-full">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-center pt-1">
+<div class="p-3 bg-surface rounded-xl">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">32 Min</span>
+<span class="block text-body-sm font-body-sm text-on-surface-variant">Avg Delivery Time</span>
+</div>
+<div class="p-3 bg-surface rounded-xl">
+<span class="text-headline-sm font-headline-sm font-bold text-secondary">99.2%</span>
+<span class="block text-body-sm font-body-sm text-on-surface-variant">Counter Pickup SLA</span>
+</div>
+</div>
+</div>
+<!-- Real-Time Customer WhatsApp Inquiries -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">forum</span>
+<h3 class="text-title-md font-title-md text-on-surface font-bold">Silvassa Inquiries</h3>
+</div>
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary text-[12px] font-bold flex items-center justify-center">12</span>
+</div>
+<div class="space-y-3">
+<!-- Inquiry 1 -->
+<div class="p-3.5 bg-surface rounded-xl flex flex-col gap-2 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Harshvardhan Jadeja</span>
+<span class="text-[11px] text-on-surface-variant">3 mins ago</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface line-clamp-2">
+              "Is the Sony 55 inch available for instant pickup from Red Cross shop right now? Can I pay cash at counter?"
+            </p>
+<div class="flex items-center justify-between pt-1">
+<span class="text-label-md font-label-md text-secondary font-semibold">Tag: Walk-in Purchase</span>
+<button class="px-2 py-1 rounded bg-secondary text-on-secondary text-label-md font-label-md font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">send</span> Reply
+              </button>
+</div>
+</div>
+<!-- Inquiry 2 -->
+<div class="p-3.5 bg-surface rounded-xl flex flex-col gap-2 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Pooja Mehra (Sayli)</span>
+<span class="text-[11px] text-on-surface-variant">14 mins ago</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface line-clamp-2">
+              "Bajaj Finserv zero down-payment available today on Daikin AC? Need home installation tomorrow."
+            </p>
+<div class="flex items-center justify-between pt-1">
+<span class="text-label-md font-label-md text-on-surface-variant font-semibold">Tag: Finance / EMI</span>
+<button class="px-2 py-1 rounded bg-secondary text-on-secondary text-label-md font-label-md font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">send</span> Reply
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Google Reviews Moderation Stream (4.9★ Storefront Credibility) -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">reviews</span>
+<h3 class="text-title-md font-title-md text-on-surface font-bold">Google Reviews Feed</h3>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-bold text-label-md font-label-md">
+<span class="material-symbols-outlined text-[14px] text-secondary">star</span> 4.9 / 5.0
+          </div>
+</div>
+<div class="p-4 bg-surface rounded-xl flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-[12px]">RK</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md font-bold text-on-surface">Rohan K. (Local Guide)</span>
+<span class="text-[11px] text-on-surface-variant">Verified Showroom Buyer</span>
+</div>
+</div>
+<div class="flex text-secondary text-[14px]">
+              ★★★★★
+            </div>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface italic">
+            "Best electronics store in Silvassa! Bought Apple iPhone 15 at better price than online festive sales. Rajesh helped set up iCloud in 10 minutes at the counter."
+          </p>
+<div class="flex items-center justify-between pt-1 text-label-md font-label-md">
+<span class="text-secondary font-semibold">Pinned to Customer Storefront</span>
+<button class="text-on-surface-variant hover:text-on-surface font-medium">Manage Feed</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Footer Metrics Bar -->
+<div class="px-8 py-6 mt-4">
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-3">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>Saibaba Electronics Cloud POS • Terminal ID: <strong>SLV-POS-01</strong> • Silvassa Red Cross Road, D&amp;NH</span>
+</div>
+<div class="flex items-center gap-6">
+<span>GSTIN: <strong>26AAGCS9481Q1ZU</strong></span>
+<span>E-Invoicing Compliant</span>
+<a class="text-secondary font-bold hover:underline" href="#">Download Day-End Z-Report</a>
+</div>
+</div>
+</div>
+</div></main></div><div class="demo-label">CLIENT PREVIEW · Sample products &amp; prices</div></body></html>
