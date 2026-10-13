@@ -4,7 +4,7 @@ const money=n=>'₹'+n.toLocaleString('en-IN');
 const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
 const save=(key,v)=>{try{localStorage.setItem(key,JSON.stringify(v))}catch{}};
 let cart=read('saibaba-cart',null), wishes=read('saibaba-wishes',[]);
-const PREVIEW_KEY='saibaba-demo-started-at', PREVIEW_LIMIT_MS=10*60*1000, CONTACT_NUMBER='+919428019172', DISPLAY_NUMBER='+91 94280 19172';
+const PREVIEW_KEY='saibaba-demo-started-at', PREVIEW_LIMIT_MS=10*60*1000, CALL_NUMBER='+917863000435', CALL_DISPLAY='+91 7863000435', WHATSAPP_NUMBER='917984344301', WHATSAPP_DISPLAY='+91 7984344301';
 function initPreviewGate(){
  if(new URLSearchParams(location.search).has('demo-reset'))localStorage.removeItem(PREVIEW_KEY);
  let started=Number(localStorage.getItem(PREVIEW_KEY));
@@ -21,7 +21,7 @@ function initPreviewGate(){
   overlay.className='preview-lock';
   overlay.setAttribute('role','dialog');
   overlay.setAttribute('aria-modal','true');
-  overlay.innerHTML=`<div class="preview-lock-card"><span class="material-symbols-outlined preview-lock-icon" aria-hidden="true">lock_clock</span><p class="preview-lock-kicker">Client preview expired</p><h2>Demo access time is over</h2><p>This website preview was available for 10 minutes. For full access, more pages, pricing changes, or a live walkthrough, please contact Saibaba Electronics.</p><div class="preview-lock-actions"><a href="tel:${CONTACT_NUMBER}"><span class="material-symbols-outlined" aria-hidden="true">call</span> Call ${DISPLAY_NUMBER}</a><a href="https://wa.me/919428019172?text=Hi%2C%20I%20want%20full%20website%20access%20after%20the%2010-minute%20preview" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">chat</span> WhatsApp Now</a></div></div>`;
+  overlay.innerHTML=`<div class="preview-lock-card"><span class="material-symbols-outlined preview-lock-icon" aria-hidden="true">lock_clock</span><p class="preview-lock-kicker">Client preview expired</p><h2>Demo access time is over</h2><p>This website preview was available for 10 minutes. For full access, more pages, pricing changes, or a live walkthrough, please contact Saibaba Electronics.</p><div class="preview-lock-actions"><a href="tel:${CALL_NUMBER}"><span class="material-symbols-outlined" aria-hidden="true">call</span> Call ${CALL_DISPLAY}</a><a href="https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20want%20full%20website%20access%20after%20the%2010-minute%20preview" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">chat</span> WhatsApp ${WHATSAPP_DISPLAY}</a></div></div>`;
   document.body.append(overlay);
  };
  const tick=()=>{
