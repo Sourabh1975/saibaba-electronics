@@ -4,6 +4,37 @@ const money=n=>'₹'+n.toLocaleString('en-IN');
 const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
 const save=(key,v)=>{try{localStorage.setItem(key,JSON.stringify(v))}catch{}};
 let cart=read('saibaba-cart',null), wishes=read('saibaba-wishes',[]);
+const PREVIEW_KEY='saibaba-demo-started-at', PREVIEW_LIMIT_MS=10*60*1000, CONTACT_NUMBER='+919428019172', DISPLAY_NUMBER='+91 94280 19172';
+function initPreviewGate(){
+ if(new URLSearchParams(location.search).has('demo-reset'))localStorage.removeItem(PREVIEW_KEY);
+ let started=Number(localStorage.getItem(PREVIEW_KEY));
+ if(!started||Number.isNaN(started)||started>Date.now()){started=Date.now();localStorage.setItem(PREVIEW_KEY,String(started))}
+ const badge=document.createElement('div');
+ badge.className='preview-timer';
+ badge.setAttribute('role','timer');
+ badge.setAttribute('aria-live','polite');
+ document.body.append(badge);
+ const lock=()=>{
+  if(document.querySelector('.preview-lock'))return;
+  document.body.classList.add('preview-expired');
+  const overlay=document.createElement('section');
+  overlay.className='preview-lock';
+  overlay.setAttribute('role','dialog');
+  overlay.setAttribute('aria-modal','true');
+  overlay.innerHTML=`<div class="preview-lock-card"><span class="material-symbols-outlined preview-lock-icon" aria-hidden="true">lock_clock</span><p class="preview-lock-kicker">Client preview expired</p><h2>Demo access time is over</h2><p>This website preview was available for 10 minutes. For full access, more pages, pricing changes, or a live walkthrough, please contact Saibaba Electronics.</p><div class="preview-lock-actions"><a href="tel:${CONTACT_NUMBER}"><span class="material-symbols-outlined" aria-hidden="true">call</span> Call ${DISPLAY_NUMBER}</a><a href="https://wa.me/919428019172?text=Hi%2C%20I%20want%20full%20website%20access%20after%20the%2010-minute%20preview" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">chat</span> WhatsApp Now</a></div></div>`;
+  document.body.append(overlay);
+ };
+ const tick=()=>{
+  const remaining=Math.max(0,PREVIEW_LIMIT_MS-(Date.now()-started));
+  const minutes=String(Math.floor(remaining/60000)).padStart(2,'0');
+  const seconds=String(Math.floor((remaining%60000)/1000)).padStart(2,'0');
+  badge.textContent=remaining?'Preview ends in '+minutes+':'+seconds:'Preview expired';
+  if(!remaining)lock();
+ };
+ tick();
+ setInterval(tick,1000);
+}
+initPreviewGate();
 function toast(text){$('.demo-toast')?.remove();const el=document.createElement('div');el.className='demo-toast';el.setAttribute('role','status');el.textContent=text;document.body.append(el);setTimeout(()=>el.remove(),3000)}
 function modal(title,text){const d=document.createElement('dialog');const h=document.createElement('h2');h.textContent=title;const p=document.createElement('p');p.textContent=text;const b=document.createElement('button');b.textContent='Close';b.onclick=()=>d.close();d.append(h,p,b);d.onclose=()=>d.remove();document.body.append(d);d.showModal()}
 function badge(){const b=$('[data-path="shopping-cart"] span:last-child');if(b)b.textContent=cart?cart.reduce((s,p)=>s+p.qty,0):2;const w=$('[data-path="wishlist"] span:last-child');if(w)w.textContent=wishes.length}
